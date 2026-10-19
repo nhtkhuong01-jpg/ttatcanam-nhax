@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#170b3e">
+<title>Thiệp 20/10 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="nebula one"></div><div class="nebula two"></div><div class="nebula three"></div>
+<div id="floatingHearts" aria-hidden="true"></div>
+<div class="sparkle-layer" aria-hidden="true"></div>
+
+<!-- Nhạc nền tự động phát, không cần nút bật/tắt -->
+<audio id="bgMusic" autoplay loop preload="auto" src="music.mp3/nhac2010.mp3.mp3"></audio>
+
+<section id="welcome-screen" aria-label="Màn hình mở thiệp">
+  <div class="welcome-orbit orbit-a"></div><div class="welcome-orbit orbit-b"></div>
+  <div class="welcome-stars">✦ · ✧ · ✦</div>
+  <div class="envelope">
+    <div class="envelope-glow"></div>
+    <button id="open-heart" aria-label="Mở thiệp" onclick="openCard()">
+      <span class="heart-shape">♥</span><span class="heart-spark">✦</span>
+    </button>
+  </div>
+  <h1 class="welcome-title">Một món quà <span>dành cho bạn</span></h1>
+  <p class="welcome-subtitle"> CÓ BẤT NGỜ CHO BẠN ✨</p>
+  <p class="tap-note">CHẠM VÀO TRÁI TIM ĐỂ MỞ THIỆP ✨</p>
+</section>
+
+<main class="book" id="card-book" aria-label="Thiệp 20 tháng 10">
+  <svg class="heart-outline" viewBox="0 0 700 620" preserveAspectRatio="none" aria-hidden="true">
+    <defs><linearGradient id="heartStroke" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#ff9cdd"/><stop offset="48%" stop-color="#c4a5ff"/><stop offset="100%" stop-color="#83e8ff"/></linearGradient></defs>
+    <path d="M350 575 C300 530 55 360 45 210 C35 95 170 25 265 95 C305 123 330 157 350 183 C370 157 395 123 435 95 C530 25 665 95 655 210 C645 360 400 530 350 575Z" fill="rgba(44,15,76,.28)" stroke="url(#heartStroke)" stroke-width="2.2"/>
+    <path d="M350 558 C298 513 76 354 66 211 C58 118 169 53 253 113" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="1.2"/>
+  </svg>
+  <div class="book-glow"></div>
+  <div class="orbit orbit1"></div><div class="orbit orbit2"></div>
+
+  <section class="page active">
+    
+    <div class="heart-cluster"><span>💖</span><span>💜</span><span>💗</span></div>
+    <div class="date-title">20<span>/</span>10</div>
+    <h1>Chúc mừng ngày Phụ nữ Việt Nam</h1>
+    <p class="subtitle">Gửi đến bạn những điều bất ngờ nhất nhất  ✨</p>
+    <p id="musicStatus" class="music-note">♪  </p>
+  </section>
+
+  <section class="page">
+
+    <div class="heart-icon">💝</div>
+    <h1>Gửi đến HÒA NHÃ thân mến</h1>
+
+    <div class="wish-card">
+      <span class="wish-card-spark">✦</span>
+      Chúc Nhã một ngày 20/10 ngập tràn tình yêu thương và những điều ngọt ngào. Hãy cứ sống rực rỡ và lạc quan như một đóa  hướng dương luôn vươn về phía mặt trời💗
+      <span class="wish-card-spark">✧</span>
+    </div>
+
+  </section>
+
+
+  <nav class="navigation" aria-label="Điều hướng các trang">
+    <button class="home-return" onclick="backToWelcome()" aria-label="Quay về sảnh" title="Quay về sảnh">⌂ Sảnh</button>
+    <button class="secondary" onclick="prevPage()">← Trước</button>
+    <span id="pageNumber">1 / 4</span>
+    <button class="primary-button" onclick="nextPage()">Tiếp →</button>
+  </nav>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
+
